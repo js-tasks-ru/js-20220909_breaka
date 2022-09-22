@@ -17,10 +17,10 @@ export function trimSymbols(string, size) {
   let acc = 0;
 
   string.split('').map(i => {
-    if (result.at(-1) === i && acc !== size) {
+    if (result[result.length - 1] === i && acc !== size) {
       acc++;
       result += i;
-    } else if (result.at(-1) !== i) {
+    } else if (result[result.length - 1] !== i) {
       acc = 1;
       result += i;
     }
